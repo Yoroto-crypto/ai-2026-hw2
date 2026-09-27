@@ -1,0 +1,37 @@
+{
+  "scheme": "Funded scholarship 2026 - six shortlisted candidates",
+  "purpose": "One funded place. Six candidates sent a written story with their application; there is no application form and no structured data, only the story in data/candidates/.",
+  "criteria": [
+    {
+      "id": "academic",
+      "label": "Academic record",
+      "weight": 0.5,
+      "scale": [0, 5],
+      "what_5_means": "degree and grades stated clearly, and strong (a 4.0-scale GPA at or above 3.7, or an equivalent record stated on another scale)",
+      "what_0_means": "no academic information in the story at all"
+    },
+    {
+      "id": "research",
+      "label": "Research output",
+      "weight": 0.3,
+      "scale": [0, 5],
+      "what_5_means": "two or more published peer-reviewed outputs",
+      "what_0_means": "none published"
+    },
+    {
+      "id": "experience",
+      "label": "Relevant experience",
+      "weight": 0.2,
+      "scale": [0, 5],
+      "what_5_means": "two years or more of directly relevant work or internship, with the months stated",
+      "what_0_means": "none stated"
+    }
+  ],
+  "counting_rules": {
+    "publications": "Count a publication only when the story says it is published or accepted. 'In preparation', 'submitted', 'under review', 'planned' and 'in press' are NOT published - record them separately and do not count them.",
+    "gpa": "Convert to a 4.0 scale and state the scale the story used. A story with no GPA scores 0 on academic and its gpa_4_scale is null. Never estimate a missing GPA from the degree, the university or the impression the story gives.",
+    "experience": "Count months, not jobs. Overlapping periods count once. A period with no dates is not countable - record it and score only the months you can count.",
+    "contradiction": "If the story contradicts itself, do not resolve it and do not average it: the field is null, the contradiction goes in ambiguities, and the marker decides."
+  },
+  "rule_for_the_ranking": "The model returns a 0-5 score for each of the three criteria and nothing else it is asked to compute. The weighted total and the winner are computed in code, from those scores. 0.5 * academic + 0.3 * research + 0.2 * experience, rounded to two decimals."
+}

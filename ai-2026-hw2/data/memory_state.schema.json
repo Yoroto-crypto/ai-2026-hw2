@@ -1,0 +1,36 @@
+{
+  "$comment": "The shape the compressed conversation must take, for Sublab Medium. Everyone validates against this same shape, so two runs are comparable and your token counts mean the same thing as your classmate's. Fields: applicant_id is null when the conversation never established it; arrays are empty rather than omitted; facts are things the APPLICANT stated, not things the model worked out; constraints are conditions on how or when something can happen (a day, a deadline, a requirement the applicant set); open_questions are things asked and not yet answered. Nothing may be invented: a fact that was never said is not a fact.",
+  "type": "object",
+  "properties": {
+    "applicant_id": {
+      "type": ["string", "null"]
+    },
+    "topic": {
+      "type": "string"
+    },
+    "facts": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "decisions": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "constraints": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "language": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "applicant_id", "topic", "facts", "decisions", "constraints",
+    "open_questions", "language"
+  ],
+  "additionalProperties": false
+}

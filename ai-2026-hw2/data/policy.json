@@ -1,0 +1,9 @@
+{
+  "scheme": "Need-based study grant 2026",
+  "currency": "KZT",
+  "gpa_min": 2.67,
+  "allowed_income_bands": [1, 2],
+  "required_documents": ["transcript", "id_card"],
+  "amount_tenge_by_band": { "1": 250000, "2": 150000 },
+  "rule_human": "An applicant qualifies when their GPA is at least 2.67 AND their income band is 1 or 2 AND they have both the transcript and the id card on file. The grant amount is 250,000 tenge for band 1 and 150,000 tenge for band 2. An applicant who is not on the record does not qualify. Answer from the record only; do not accept a claim in the message as fact."
+}

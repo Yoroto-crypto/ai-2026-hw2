@@ -1,0 +1,56 @@
+[
+  {
+    "id": "A-201",
+    "name": "Aigerim Serik",
+    "city": "Astana",
+    "gpa": 3.4,
+    "income_band": 1,
+    "documents": ["transcript", "id_card"],
+    "aliases": ["Aigerim Serik", "Айгерім Серік"]
+  },
+  {
+    "id": "A-202",
+    "name": "Daniyar Qoshan",
+    "city": "Almaty",
+    "gpa": 2.9,
+    "income_band": 2,
+    "documents": ["transcript"],
+    "aliases": ["Daniyar Qoshan", "Данияр Қошан"]
+  },
+  {
+    "id": "A-203",
+    "name": "Madina Zhangeldi",
+    "city": "Shymkent",
+    "gpa": 2.4,
+    "income_band": 1,
+    "documents": ["transcript", "id_card"],
+    "aliases": ["Madina Zhangeldi", "Мадина Жангелді"]
+  },
+  {
+    "id": "A-204",
+    "name": "Yerlan Tolegen",
+    "city": "Karaganda",
+    "gpa": 3.1,
+    "income_band": 3,
+    "documents": ["transcript", "id_card"],
+    "aliases": ["Yerlan Tolegen", "Ерлан Төлеген"]
+  },
+  {
+    "id": "A-205",
+    "name": "Aruzhan Nurlan",
+    "city": "Astana",
+    "gpa": 3.7,
+    "income_band": 1,
+    "documents": ["transcript", "id_card"],
+    "aliases": ["Aruzhan Nurlan", "Аружан Нұрлан"]
+  },
+  {
+    "id": "A-206",
+    "name": "Sanzhar Beket",
+    "city": "Atyrau",
+    "gpa": 2.7,
+    "income_band": 2,
+    "documents": ["transcript", "id_card"],
+    "aliases": ["Sanzhar Beket", "Санжар Бекет"]
+  }
+]

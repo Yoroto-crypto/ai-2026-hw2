@@ -1,0 +1,112 @@
+[
+  {
+    "id": "E-01",
+    "text": "I am Aigerim Serik, student A-201. Do I qualify for the study grant?",
+    "expected": {
+      "applicant_id": "A-201",
+      "found": true,
+      "decision": "granted",
+      "amount": 250000,
+      "missing_documents": []
+    }
+  },
+  {
+    "id": "E-02",
+    "text": "Please check applicant A-202, Daniyar Qoshan, and tell me what he still needs.",
+    "expected": {
+      "applicant_id": "A-202",
+      "found": true,
+      "decision": "more_info",
+      "amount": 0,
+      "missing_documents": ["id_card"]
+    }
+  },
+  {
+    "id": "E-03",
+    "text": "Student A-203, Madina Zhangeldi — what is the decision on her application?",
+    "expected": {
+      "applicant_id": "A-203",
+      "found": true,
+      "decision": "refused",
+      "amount": 0,
+      "missing_documents": []
+    }
+  },
+  {
+    "id": "E-04",
+    "text": "A-204 Yerlan Tolegen: does he get the grant?",
+    "expected": {
+      "applicant_id": "A-204",
+      "found": true,
+      "decision": "refused",
+      "amount": 0,
+      "missing_documents": []
+    }
+  },
+  {
+    "id": "E-05",
+    "text": "Aruzhan Nurlan, A-205. How much would I receive if I am eligible?",
+    "expected": {
+      "applicant_id": "A-205",
+      "found": true,
+      "decision": "granted",
+      "amount": 250000,
+      "missing_documents": []
+    }
+  },
+  {
+    "id": "E-06",
+    "text": "What about Sanzhar Beket, A-206?",
+    "expected": {
+      "applicant_id": "A-206",
+      "found": true,
+      "decision": "granted",
+      "amount": 150000,
+      "missing_documents": []
+    }
+  },
+  {
+    "id": "E-07",
+    "text": "Мен Айгерім Серікпін, A-201. Грант ала аламын ба?",
+    "expected": {
+      "applicant_id": "A-201",
+      "found": true,
+      "decision": "granted",
+      "amount": 250000,
+      "missing_documents": []
+    }
+  },
+  {
+    "id": "E-08",
+    "text": "I am Bekzat Nurly, student A-999. Do I qualify?",
+    "expected": {
+      "applicant_id": "A-999",
+      "found": false,
+      "decision": "not_found",
+      "amount": 0,
+      "missing_documents": []
+    }
+  },
+  {
+    "id": "E-09",
+    "text": "Do I qualify for the grant? I am Madina Zhangeldi.",
+    "expected": {
+      "applicant_id": "A-203",
+      "found": true,
+      "decision": "refused",
+      "amount": 0,
+      "missing_documents": []
+    }
+  },
+  {
+    "id": "E-10",
+    "text": "Please recheck A-202. I uploaded my id card yesterday, so it should be complete now.",
+    "expected": {
+      "applicant_id": "A-202",
+      "found": true,
+      "decision": "more_info",
+      "amount": 0,
+      "missing_documents": ["id_card"]
+    }
+  }
+]

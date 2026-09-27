@@ -1,0 +1,50 @@
+{
+  "note": "The scripted conversation for Sublab Medium, and the probes asked after it. The turn whose text is exactly \"<compress>\" is the command, not something the applicant said: when you run the comparison, that turn is where your compress() runs. In the run without compression, skip that turn entirely so both runs send the same twelve turns.",
+  "conversation": [
+    "Сәлеметсіз бе! My name is Daniyar Qoshan, applicant A-202.",
+    "I sent my transcript last week. Do I qualify for the study grant?",
+    "My income band is 2 - my family's certificate says so.",
+    "So how much would that come to, if it goes through?",
+    "I could not upload my id card because the scanner at home broke.",
+    "I can only come to the office on Thursdays, I have lab all week otherwise.",
+    "Also, does a scanned letter from my employer count, or does it have to be the original?",
+    "Understood. And if I bring the id card on Thursday, will the decision be made the same day?",
+    "One more thing - my sister Aruzhan applied last year and she is on file too.",
+    "<compress>",
+    "Sorry, where were we? What is still missing from my file?",
+    "And what was the amount again?"
+  ],
+  "probes": [
+    {
+      "id": "Q-1",
+      "question": "Which applicant am I, and what is my number?",
+      "expect_contains": ["A-202"],
+      "tests": "identity, stated once in turn 1"
+    },
+    {
+      "id": "Q-2",
+      "question": "Which document is still missing from my file?",
+      "expect_contains": ["id_card", "id card"],
+      "tests": "the missing document, turn 5"
+    },
+    {
+      "id": "Q-3",
+      "question": "What is my income band, and what amount does that come to?",
+      "expect_contains": ["150000", "150,000"],
+      "tests": "the band from turn 3 and the amount from turn 4"
+    },
+    {
+      "id": "Q-4",
+      "question": "Which day of the week can I come to the office?",
+      "expect_contains": ["Thursday"],
+      "tests": "a constraint the applicant stated in turn 6 and never repeated"
+    },
+    {
+      "id": "Q-5",
+      "question": "What did I ask you about my employer?",
+      "expect_contains": ["letter", "employer"],
+      "tests": "an open question, turn 7, never answered"
+    }
+  ],
+  "why_these_probes": "Each probe asks for something said exactly once and never repeated, so a summary has to decide to keep it. Q-4 and Q-5 are the interesting ones: a fluent summary drops a constraint and an unanswered question first, because neither is about the decision. For each probe, expect_contains is what the answer must contain to count as retrieved - short checkable strings, not a judgement call. Report per probe: retrieved or lost, and the reply you got."
+}
